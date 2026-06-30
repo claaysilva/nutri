@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background-color: #FAF8F4;
+    color: #0E0E0C;
+    font-family: 'Inter', -apple-system, sans-serif;
+    overscroll-behavior-y: none;
+  }
+  /* Garante números tabulares para alinhamento */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+}
+
+@layer utilities {
+  .hairline-b {
+    box-shadow: 0 1px 0 #E5DFD3;
+  }
+  .hairline-t {
+    box-shadow: 0 -1px 0 #E5DFD3;
+  }
+  /* Para a pontilhada serifada hero */
+  .display-italic {
+    font-style: italic;
+    font-feature-settings: 'ss01';
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
